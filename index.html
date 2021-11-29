@@ -33,6 +33,9 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+  <a-assets>
+    <img id="test_img" src="myImage.jpg">
+</a-assets>
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"
@@ -42,8 +45,10 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >
-    <a-image src="myImage.jpg"></a-image>
-    </a-nft>
+    <a-image 
+    rotation="90 0 0"
+    src="#text_img"></a-image>
+</a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
